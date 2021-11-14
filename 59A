@@ -1,0 +1,40 @@
+#include<iostream>
+#include<bits/stdc++.h>
+using namespace std;
+
+
+    
+   
+   int main(){
+       string rs;
+       cin>>rs;
+       int in=rs.length();
+       int s=0,c=0,i;
+       for( int i=0;i<in;i++){
+           if(rs[i]>='a' && rs[i]<='z')
+           s++;
+           else
+           c++;
+       }
+           if(s>c || c==s)
+           {
+               for(i=0;i<in;i++)
+               {
+                   if(rs[i]>='A' && rs[i]<='Z')
+                   rs[i]=rs[i]+32;
+               }
+           }
+           else 
+           {
+               for(i=0;i<in;i++)
+               {
+                   if(rs[i]>='a' && rs[i]<='z')
+                   rs[i]=rs[i]-32;
+               }
+           }
+           
+       cout<<rs;
+      
+   
+    return 0;
+}
