@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n,r=0,re,t;
+    scanf("%d",&n);
+    t=n;
+    while(n>0){
+        re=n%10;
+        r=(r*10)+re;
+        n=n/10;
+    }
+    if(t==r){
+        printf("True");
+    }
+    else{
+        printf("False");
+    }
+}
